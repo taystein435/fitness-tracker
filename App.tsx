@@ -1,13 +1,12 @@
-import { ScreenContent } from 'components/ScreenContent';
-import { StatusBar } from 'expo-status-bar';
-
+import { SafeAreaView, Text, View } from 'react-native';
 import './global.css';
 
 export default function App() {
   return (
-    <>
-      <ScreenContent title="Home" path="App.tsx" />
-      <StatusBar style="auto" />
-    </>
+    <SafeAreaView>
+      <View className='flex items-center justify-center'>
+      <Text className="text-red-600">Hey Tee</Text>
+      </View>
+    </SafeAreaView>
   );
 }
