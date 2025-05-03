@@ -1,12 +1,13 @@
-import { SafeAreaView, Text, View } from 'react-native';
+/* eslint-disable import/order */
 import './global.css';
+import StackNav from 'navigation/StackNav';
+import { NavigationContainer } from '@react-navigation/native';
 
 export default function App() {
   return (
-    <SafeAreaView>
-      <View className='flex items-center justify-center'>
-      <Text className="text-red-600">Hey Tee</Text>
-      </View>
-    </SafeAreaView>
+    <NavigationContainer>
+    <StackNav/>
+  </NavigationContainer>
+
   );
 }
