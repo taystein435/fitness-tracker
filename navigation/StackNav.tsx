@@ -1,7 +1,7 @@
 import Home from "../screens/Home";
 import Onboarding from "../screens/Onboarding";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import HomeNav from "./HomeNav";
+import BottomNav from "./BottomNav";
 const Stack = createNativeStackNavigator();
 export default function StackNav() {
   return (
@@ -14,8 +14,8 @@ export default function StackNav() {
         }}
       />
       <Stack.Screen
-        name="HomeNav"
-        component={HomeNav}
+        name="BottomNav"
+        component={BottomNav}
         options={{
           headerShown: false,
           
