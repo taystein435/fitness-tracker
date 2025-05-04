@@ -20,13 +20,13 @@ const Onboarding= ({ navigation }:any) => {
       </Text>
 
       <View className="absolute bottom-16 w-full px-4 ">
-        <TouchableOpacity onPress={() => navigation.navigate("BottomNav")}>
+        <TouchableOpacity onPress={() => navigation.navigate("Login")}>
           <View className="w-full h-14 bg-white rounded justify-center items-center">
             <Text className="text-black font-bold text-lg">Log in</Text>
           </View>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => navigation.navigate("BottomNav")}>
+        <TouchableOpacity onPress={() => navigation.navigate("Login")}>
           <View className="w-full h-14 bg-black rounded justify-center items-center mt-3">
             <Text className="text-white font-bold text-lg">Join now</Text>
           </View>
