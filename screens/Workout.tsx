@@ -93,7 +93,7 @@ const Workout = () => {
                         <View className="relative mt-3 px-1">
                            <Image
                          style={{ height: height * 0.25, width: width * 0.95, margin: 5, borderRadius: 10 }}
-                         source={{ uri: item.image }} // ✅ fixed
+                         source={{ uri: item.image }} 
                          contentFit="cover"
                          transition={1000}
                        />       
@@ -102,7 +102,8 @@ const Workout = () => {
                           </Text>
                           <Text className="absolute bottom-8 font-bold text-white text-sm px-4">
                            {item.description}
-                          </Text>  </View>
+                          </Text>
+                            </View>
                       )}
                     />
           </View>

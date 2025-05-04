@@ -94,7 +94,7 @@ const Plans = () => {
                 <View className="flex-row mt-6 px-1">
                    <Image
                     style={{ height: height * 0.1, width: width * 0.25, margin: 6, borderRadius: 10 }}
-                    source={{ uri: item.image }} // ✅ fixed
+                    source={{ uri: item.image }}
                     contentFit="cover"
                     transition={1000}
                   />

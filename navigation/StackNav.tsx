@@ -1,8 +1,8 @@
-import Home from "../screens/Home";
-import Onboarding from "../screens/Onboarding";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import BottomNav from "./BottomNav";
-import Login from "screens/Login";
+import Home from '../screens/Home';
+import Onboarding from '../screens/Onboarding';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import BottomNav from './BottomNav';
+import Login from 'screens/Login';
 const Stack = createNativeStackNavigator();
 export default function StackNav() {
   return (
@@ -14,7 +14,7 @@ export default function StackNav() {
           headerShown: false,
         }}
       />
-          <Stack.Screen
+      <Stack.Screen
         name="Login"
         component={Login}
         options={{
@@ -26,7 +26,6 @@ export default function StackNav() {
         component={BottomNav}
         options={{
           headerShown: false,
-          
         }}
       />
     </Stack.Navigator>

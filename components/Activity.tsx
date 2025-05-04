@@ -43,13 +43,14 @@ const Activity = () => {
              <View className="relative mt-3 px-1">
                 <Image
               style={{ height: height * 0.25, width: width * 0.4, margin: 5, borderRadius: 10 }}
-              source={{ uri: item.image }} // ✅ fixed
+              source={{ uri: item.image }} 
               contentFit="cover"
               transition={1000}
             />       
                <Text className="absolute bottom-16  font-bold text-white text-3xl px-4">
                 {item.title}
-               </Text> </View>
+               </Text>
+                </View>
            )}
          />
        </View>

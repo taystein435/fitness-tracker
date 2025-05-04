@@ -1,5 +1,4 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import HomeNav from './HomeNav';
 import Profile from 'screens/Profile';
@@ -12,7 +11,7 @@ type BottomProps = {
   color: string;
   size: number;
 };
-const BottomNav = ({ navigation }: any) => {
+const BottomNav = () => {
   return (
     <Tab.Navigator
       initialRouteName="HomeNav"
@@ -30,11 +29,11 @@ const BottomNav = ({ navigation }: any) => {
           headerShown: false,
           tabBarLabel: 'Home',
           tabBarIcon: ({ color, size }: BottomProps) => (
-            <FontAwesome name="home" size={24} color="black"/>
+            <FontAwesome name="home" size={24} color="black" />
           ),
         }}
       />
-           <Tab.Screen
+      <Tab.Screen
         name="Profile"
         component={Profile}
         options={{
@@ -45,7 +44,7 @@ const BottomNav = ({ navigation }: any) => {
           ),
         }}
       />
-           <Tab.Screen
+      <Tab.Screen
         name="Plans"
         component={Plans}
         options={{
@@ -56,7 +55,7 @@ const BottomNav = ({ navigation }: any) => {
           ),
         }}
       />
-           <Tab.Screen
+      <Tab.Screen
         name="Workout"
         component={Workout}
         options={{
