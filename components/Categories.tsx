@@ -51,7 +51,7 @@ const data = [
     {
       id: 10,
       title: 'Core Workouts',
-      image:'https://https://images.unsplash.com/photo-1610312856669-2cee66b2949c?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Ym9keWJ1aWxkaW5nfGVufDB8fDB8fHww',
+      image:'https://images.unsplash.com/photo-1610312856669-2cee66b2949c?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Ym9keWJ1aWxkaW5nfGVufDB8fDB8fHww',
     },
   ];
 const Categories = () => {
@@ -59,12 +59,13 @@ const Categories = () => {
     <View>
       <FlatList
         data={data}
+        keyExtractor={(item) => item.id.toString()}
         numColumns={2}
         renderItem={({item}) => (
           <View className="relative mt-3 px-1">
-            <Image
-              style={{ height: height*0.25, width: width*0.46,margin:5,borderRadius:10 }}
-              source={item.image}
+             <Image
+              style={{ height: height * 0.25, width: width * 0.46, margin: 5, borderRadius: 10 }}
+              source={{ uri: item.image }} // ✅ fixed
               contentFit="cover"
               transition={1000}
             />

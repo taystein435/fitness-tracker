@@ -1,9 +1,72 @@
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import { Image } from 'expo-image';
 import React from 'react';
-import { View, Text, Dimensions } from 'react-native';
+import { View, Text, Dimensions, FlatList } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 const { width, height } = Dimensions.get('window');
+const data= [
+  {
+    id: 1,
+    title: "Vegan",
+    description: "Excludes all animal products including meat, dairy, and eggs. Focuses on plant-based foods.",
+    image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=1200&auto=format&fit=crop&q=60",
+  },
+  {
+    id: 2,
+    title: "Vegetarian",
+    description: "Excludes meat and fish but includes dairy and eggs. Focuses on fruits, vegetables, grains, and legumes.",
+    image: "https://images.unsplash.com/photo-1556911073-52527ac437f5?w=1200&auto=format&fit=crop&q=60",
+  },
+  {
+    id: 3,
+    title: "Keto",
+    description: "Low-carb, high-fat diet that promotes fat burning through ketosis. Limits sugar and carbs significantly.",
+    image: "https://images.unsplash.com/photo-1613145993482-6b7f26a1bb89?w=1200&auto=format&fit=crop&q=60",
+  },
+  {
+    id: 4,
+    title: "Paleo",
+    description: "Focuses on whole foods like lean meats, fruits, vegetables, nuts, and seeds. Avoids processed foods and grains.",
+    image: "https://images.unsplash.com/photo-1609899433472-10394d76d60f?w=1200&auto=format&fit=crop&q=60",
+  },
+  {
+    id: 5,
+    title: "Mediterranean",
+    description: "Rich in fruits, vegetables, whole grains, fish, and olive oil. Inspired by traditional eating habits of Mediterranean countries.",
+    image: "https://images.unsplash.com/photo-1601924582971-c54b7f3e3b3e?w=1200&auto=format&fit=crop&q=60",
+  },
+  {
+    id: 6,
+    title: "Low-Carb",
+    description: "Limits carbohydrate intake and emphasizes protein and healthy fats for weight control and energy.",
+    image: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=1200&auto=format&fit=crop&q=60",
+  },
+  {
+    id: 7,
+    title: "Gluten-Free",
+    description: "Excludes gluten-containing grains such as wheat, barley, and rye. Designed for those with gluten sensitivity or celiac disease.",
+    image: "https://images.unsplash.com/photo-1590080876772-21c9b3270e2e?w=1200&auto=format&fit=crop&q=60",
+  },
+  {
+    id: 8,
+    title: "Whole30",
+    description: "30-day diet that eliminates sugar, alcohol, grains, legumes, soy, and dairy. Focuses on whole foods.",
+    image: "https://images.unsplash.com/photo-1568051243851-769d48269d61?w=1200&auto=format&fit=crop&q=60",
+  },
+  {
+    id: 9,
+    title: "Intermittent Fasting",
+    description: "Cycles between periods of eating and fasting. Common patterns include 16:8 or 5:2 schedules.",
+    image: "https://images.unsplash.com/photo-1589308078055-eb7e7b2a0662?w=1200&auto=format&fit=crop&q=60",
+  },
+  {
+    id: 10,
+    title: "Flexitarian",
+    description: "Primarily plant-based but allows occasional meat or animal product consumption.",
+    image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=1200&auto=format&fit=crop&q=60",
+  },
+];
+
 const Plans = () => {
   return (
     <View>
@@ -23,6 +86,31 @@ const Plans = () => {
           </View>
         </View>
       </View>
+         <View>
+            <FlatList
+              data={data}
+              keyExtractor={(item) => item.id.toString()}
+              renderItem={({item}) => (
+                <View className="flex-row mt-6 px-1">
+                   <Image
+                    style={{ height: height * 0.1, width: width * 0.25, margin: 6, borderRadius: 10 }}
+                    source={{ uri: item.image }} // ✅ fixed
+                    contentFit="cover"
+                    transition={1000}
+                  />
+                  <View >
+                  <Text className=" font-bold text-black text-xl ">
+                   {item.title}
+                  </Text> 
+                  <Text className="  text-black text-sm  w-3/6">
+                   {item.description}
+                  </Text>
+                  </View>
+              
+                  </View>
+              )}
+            />
+          </View>
     </View>
   );
 };

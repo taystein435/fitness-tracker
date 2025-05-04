@@ -34,18 +34,19 @@ const { width, height } = Dimensions.get("window");
   
 const Activity = () => {
   return (
-       <View>
+<View>
          <FlatList
            data={data}
+           keyExtractor={(item) => item.id.toString()}
          horizontal
            renderItem={({item}) => (
              <View className="relative mt-3 px-1">
-               <Image
-                 style={{ height: height*0.25, width: width*0.4,margin:5,borderRadius:10 }}
-                 source={item.image}
-                 contentFit="cover"
-                 transition={1000}
-               />
+                <Image
+              style={{ height: height * 0.25, width: width * 0.4, margin: 5, borderRadius: 10 }}
+              source={{ uri: item.image }} // ✅ fixed
+              contentFit="cover"
+              transition={1000}
+            />       
                <Text className="absolute bottom-16  font-bold text-white text-3xl px-4">
                 {item.title}
                </Text> </View>

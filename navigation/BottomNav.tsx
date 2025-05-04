@@ -30,7 +30,7 @@ const BottomNav = ({ navigation }: any) => {
           headerShown: false,
           tabBarLabel: 'Home',
           tabBarIcon: ({ color, size }: BottomProps) => (
-            <FontAwesome name="home" size={24} color="black"  />
+            <FontAwesome name="home" size={24} color="black"/>
           ),
         }}
       />
