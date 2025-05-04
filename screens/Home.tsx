@@ -41,7 +41,7 @@ const Home = () => {
           fill={90}
           prefill={90}
           tintColor="#fff"
-          backgroundColor="fff"></AnimatedCircularProgress>
+          backgroundColor="#fff"></AnimatedCircularProgress>
       </View>
       <Text className="text-xl font-bold p-2">Activity</Text>
       <Activity />

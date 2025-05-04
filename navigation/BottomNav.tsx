@@ -12,7 +12,7 @@ type BottomProps = {
   color: string;
   size: number;
 };
-const BottomNav = ({ navigation }:any) => {
+const BottomNav = ({ navigation }: any) => {
   return (
     <Tab.Navigator
       initialRouteName="HomeNav"

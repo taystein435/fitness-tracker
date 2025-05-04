@@ -3,36 +3,57 @@ import React from 'react'
 import { Image } from "expo-image";
 const { width, height } = Dimensions.get("window");
 const data = [
-  {
-    id: "4",
-    image:
-      "https://images.unsplash.com/photo-1606937295547-bc0f668595b3?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fG5ldGZsaXh8ZW58MHx8MHx8fDA%3D",
-    title: "Just £50 a month",
-    sub_title: "Sky Stream inc Netflix",
-  },
-  {
-    id: "1",
-    image:
-      "https://images.unsplash.com/photo-1483985988355-763728e1935b?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2hvcHBpbmd8ZW58MHx8MHx8fDA%3D",
-    title: "Retail therapy",
-    sub_title: "Spend and earn on your favourite brands",
-  },
-  {
-    id: "2",
-    image:
-      "https://images.unsplash.com/photo-1556228149-0b37a8638663?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzB8fFN1YnNjcmlwdGlvbnxlbnwwfHwwfHx8MA%3D%3D",
-    title: "Explore subscriptions",
-    sub_title: "Included with selected plans",
-  },
-
-  {
-    id: "3",
-    image:
-      "https://images.unsplash.com/photo-1558882199-fc72dcba2994?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzB8fGdpcmwlMjBvbiUyMHZhY2F0aW9ufGVufDB8fDB8fHww",
-    title: "Springtime holiday hotspots",
-    sub_title: "Spring's top travel destinations",
-  },
-];
+    {
+      id: 1,
+      title: 'Cardio',
+      image: 'https://images.unsplash.com/photo-1554288242-2a6c2b9e7687?auto=format&fit=crop&w=600&q=60',
+    },
+    {
+      id: 2,
+      title: 'Strength Training',
+      image: 'https://images.unsplash.com/photo-1599058917212-d750089bc07d?auto=format&fit=crop&w=600&q=60',
+    },
+    {
+      id: 3,
+      title: 'Yoga',
+      image: 'https://images.unsplash.com/photo-1584980640143-3c4b2c4cf65a?auto=format&fit=crop&w=600&q=60',
+    },
+    {
+      id: 4,
+      title: 'HIIT',
+      image: 'https://images.unsplash.com/photo-1612437302981-d1147a7f8f31?auto=format&fit=crop&w=600&q=60',
+    },
+    {
+      id: 5,
+      title: 'Pilates',
+      image: 'https://images.unsplash.com/photo-1605296867304-46d5465a13f1?auto=format&fit=crop&w=600&q=60',
+    },
+    {
+      id: 6,
+      title: 'CrossFit',
+      image: 'https://images.unsplash.com/photo-1605296867304-8e3d92b5dbf3?auto=format&fit=crop&w=600&q=60',
+    },
+    {
+      id: 7,
+      title: 'Mobility',
+      image: 'https://images.unsplash.com/photo-1627483269076-b5864f0588bb?auto=format&fit=crop&w=600&q=60',
+    },
+    {
+      id: 8,
+      title: 'Dance Fitness',
+      image: 'https://images.unsplash.com/photo-1622473590832-e3c74ce1d782?auto=format&fit=crop&w=600&q=60',
+    },
+    {
+      id: 9,
+      title: 'Stretching',
+      image: 'https://images.unsplash.com/photo-1615392481744-019b9c7a2a3c?auto=format&fit=crop&w=600&q=60',
+    },
+    {
+      id: 10,
+      title: 'Core Workouts',
+      image: 'https://images.unsplash.com/photo-1626341682047-b40ec57b29ee?auto=format&fit=crop&w=600&q=60',
+    },
+  ];
 const Categories = () => {
   return (
     <View>
@@ -41,21 +62,16 @@ const Categories = () => {
         data={data}
         numColumns={2}
         renderItem={({item}) => (
-          <View className="relative mt-3">
+          <View className="relative mt-3 px-1">
             <Image
-              style={{ height: height*0.25, width: width*0.4,margin:5,borderRadius:10 }}
+              style={{ height: height*0.25, width: width*0.45,margin:5,borderRadius:10 }}
               source={item.image}
               contentFit="cover"
               transition={1000}
             />
             <Text className="absolute bottom-16  font-bold text-white text-3xl px-4">
              {item.title}
-            </Text>
-            <Text className="absolute bottom-8 font-semibold text-white text-lg px-4">
-            {item.sub_title}
-            </Text>
-           
-          </View>
+            </Text> </View>
         )}
       />
     </View>
