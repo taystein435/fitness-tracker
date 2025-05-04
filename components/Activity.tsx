@@ -41,7 +41,7 @@ const Activity = () => {
            renderItem={({item}) => (
              <View className="relative mt-3 px-1">
                <Image
-                 style={{ height: height*0.25, width: width*0.45,margin:5,borderRadius:10 }}
+                 style={{ height: height*0.25, width: width*0.4,margin:5,borderRadius:10 }}
                  source={item.image}
                  contentFit="cover"
                  transition={1000}
