@@ -43,10 +43,11 @@ const Home = () => {
           tintColor="#fff"
           backgroundColor="#fff"></AnimatedCircularProgress>
       </View>
-      <Text className="text-xl font-bold p-2">Explore</Text>
-      <Activity />
       <Text className="text-xl font-bold p-2">Categories</Text>
       <Categories />
+      <Text className="text-xl font-bold p-2">Explore</Text>
+      <Activity />
+      
     </SafeAreaView>
   );
 };

@@ -34,49 +34,25 @@ const { width, height } = Dimensions.get("window");
   
 const Activity = () => {
   return (
-    <View>
-      <FlatList
-        horizontal
-        keyExtractor={(item) => item.id}
-        data={data}
-        renderItem={({ item }) => (
-          <View className="">
-            <View
-              style={{
-                height: height * 0.25,
-                width: width * 0.94,
-                margin: 5,
-                borderRadius: 10,
-              }}
-            >
-              <Image
-                style={{
-                  height: 50,
-                  width: 50,
-                  display: "flex",
-                  alignSelf: "flex-end",
-                }}
-                source={item.image}
-                contentFit="contain"
-                transition={1000}
-              />
-              <View
-                style={{
-
-                  alignItems: "center",
-                  justifyContent: "center",
-                  
-                }}
-              >
-                <Text className=" font-bold text-white text-5xl px-4">
-                  {item.title}
-                </Text>
-              </View>
-            </View>
-          </View>
-        )}
-      />
-    </View>
+       <View>
+         <FlatList
+           keyExtractor={(item) => item.id}
+           data={data}
+         horizontal
+           renderItem={({item}) => (
+             <View className="relative mt-3 px-1">
+               <Image
+                 style={{ height: height*0.25, width: width*0.45,margin:5,borderRadius:10 }}
+                 source={item.image}
+                 contentFit="cover"
+                 transition={1000}
+               />
+               <Text className="absolute bottom-16  font-bold text-white text-3xl px-4">
+                {item.title}
+               </Text> </View>
+           )}
+         />
+       </View>
   );
 };
 
