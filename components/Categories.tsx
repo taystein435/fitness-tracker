@@ -58,7 +58,6 @@ const Categories = () => {
   return (
     <View>
       <FlatList
-        keyExtractor={(item) => item.id}
         data={data}
         numColumns={2}
         renderItem={({item}) => (

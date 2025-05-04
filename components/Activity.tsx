@@ -36,7 +36,6 @@ const Activity = () => {
   return (
        <View>
          <FlatList
-           keyExtractor={(item) => item.id}
            data={data}
          horizontal
            renderItem={({item}) => (
