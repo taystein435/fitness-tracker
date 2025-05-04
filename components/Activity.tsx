@@ -6,54 +6,30 @@ const { width, height } = Dimensions.get("window");
   const data = [
     {
       id: 1,
-      title: 'Morning Run',
-      image: 'https://images.unsplash.com/photo-1599058917212-6a46b88f1032?auto=format&fit=crop&w=600&q=60',
+      title: 'Meals',
+      image: 'https://images.unsplash.com/photo-1564671165093-20688ff1fffa?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fG1lYWx8ZW58MHx8MHx8fDA%3D',
     },
     {
       id: 2,
-      title: 'Upper Body Strength',
-      image: 'https://images.unsplash.com/photo-1600180758890-6dc87f4a316b?auto=format&fit=crop&w=600&q=60',
+      title: 'Find a Gym',
+      image: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z3ltfGVufDB8fDB8fHww',
     },
     {
       id: 3,
-      title: 'Sunrise Yoga',
-      image: 'https://images.unsplash.com/photo-1583454110551-21d7f7aaf9b2?auto=format&fit=crop&w=600&q=60',
+      title: 'Trainer',
+      image: 'https://images.unsplash.com/photo-1548690312-e3b507d8c110?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGd5bXxlbnwwfHwwfHx8MA%3D%3D',
     },
     {
       id: 4,
-      title: 'HIIT Blast',
-      image: 'https://images.unsplash.com/photo-1613382286624-06ed3b8de25c?auto=format&fit=crop&w=600&q=60',
+      title: 'Activity',
+      image: 'https://plus.unsplash.com/premium_photo-1670505062582-fdaa83c23c9e?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Z3ltfGVufDB8fDB8fHww',
     },
     {
       id: 5,
-      title: 'Core Crusher',
-      image: 'https://images.unsplash.com/photo-1618571541575-85faed90c017?auto=format&fit=crop&w=600&q=60',
+      title: 'Goals',
+      image: 'https://plus.unsplash.com/premium_photo-1726761933972-04234e1303cd?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8d2VpZ2h0JTIwc2NsZXxlbnwwfHwwfHx8MA%3D%3D',
     },
-    {
-      id: 6,
-      title: 'Evening Stretch',
-      image: 'https://images.unsplash.com/photo-1558611848-73f7eb4001a1?auto=format&fit=crop&w=600&q=60',
-    },
-    {
-      id: 7,
-      title: 'Full Body Burn',
-      image: 'https://images.unsplash.com/photo-1623776053492-d7c9c6d55c46?auto=format&fit=crop&w=600&q=60',
-    },
-    {
-      id: 8,
-      title: 'Mobility Flow',
-      image: 'https://images.unsplash.com/photo-1632990388166-9c234f4dc8d3?auto=format&fit=crop&w=600&q=60',
-    },
-    {
-      id: 9,
-      title: 'Dance Cardio',
-      image: 'https://images.unsplash.com/photo-1630541138574-3e30fbc2b54c?auto=format&fit=crop&w=600&q=60',
-    },
-    {
-      id: 10,
-      title: 'Leg Day',
-      image: 'https://images.unsplash.com/photo-1583454110551-2d51a9f37e42?auto=format&fit=crop&w=600&q=60',
-    },
+    
   ];
   
 const Activity = () => {
@@ -64,7 +40,7 @@ const Activity = () => {
         keyExtractor={(item) => item.id}
         data={data}
         renderItem={({ item }) => (
-          <View className=" ">
+          <View className="">
             <View
               style={{
                 height: height * 0.25,
