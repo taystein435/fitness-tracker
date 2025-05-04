@@ -79,9 +79,9 @@ const Workout = () => {
             transition={1000}
           />
 
-          <View className="absolute top-14  w-2/3  flex-row items-center justify-between ">
+          <View className="absolute top-20  w-2/3  flex-row items-center justify-between ">
             <MaterialIcons name="arrow-back" size={30} color="white" />
-            <Text className="text-4xl font-bold text-white ">Workout</Text>
+            <Text className="text-4xl font-bold text-white ">Training</Text>
           </View>
         </View>
       </View>
